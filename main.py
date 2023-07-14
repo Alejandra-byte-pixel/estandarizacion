@@ -8,7 +8,7 @@ st.markdown(
     """
     <style>
     .main {
-        background-color: #fffefe;
+        background-color: #302827;
         padding: 20px;
         color: white;
     }
