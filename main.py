@@ -8,7 +8,12 @@ st.markdown(
     """
     <style>
     body {
-        background-color: #FFFFFF;
+        background-color: #FFFFFF !important;
+        color: black;
+    }
+
+    .sidebar .sidebar-content {
+        background-color: #FFFFFF !important;
         color: black;
     }
     </style>
@@ -24,6 +29,7 @@ st.markdown("<h1 style='color: red;'>Aplicación Estandarización de teléfonos 
 st.sidebar.image("LogoAIO.jpeg", caption='ALL IN ONE', use_column_width=True)
 st.sidebar.markdown("<h1 style='text-align: center; color: black;'>Aquí cargue el archivo</h1>", unsafe_allow_html=True)
 nombre_archivo = st.sidebar.file_uploader("Cargue archivo TXT", type=["txt"], key="file-upload", help='Limite 200MB')
+
 
 
 Dataframe1 = {"cadenas": [],
