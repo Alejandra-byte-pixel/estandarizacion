@@ -24,6 +24,7 @@ st.markdown("<h1 style='color: red;'>Aplicación Estandarización de teléfonos 
 
 # Imagen a la derecha en la parte principal
 #image = Image.open("LogoSETI.jpeg")
+st.image("LogoSETI.jpeg", caption='ALL IN ONE', use_column_width=True)
 #st.image(image, caption='SETI', width=200, use_column_width=False)
 
 # Barra lateral (sidebar)
