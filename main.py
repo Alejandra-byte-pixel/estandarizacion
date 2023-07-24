@@ -12,6 +12,9 @@ st.markdown(
         padding: 20px;
         color: white;
     }
+    .column {
+        padding: 10px;
+    }
     </style>
     """,
     unsafe_allow_html=True
