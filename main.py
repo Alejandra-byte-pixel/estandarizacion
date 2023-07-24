@@ -8,7 +8,7 @@ st.markdown(
     """
     <style>
     .main {
-        background-color: #302827;
+        background-color: #FFFFFF;
         padding: 20px;
         color: white;
     }
@@ -19,6 +19,12 @@ st.markdown(
 
 separador_campos = ';'
 st.title("Aplicación Estandarización de telefonos nacionales")
+
+# Contenedor principal
+separador_campos = ';'
+st.markdown("<div class='main'>", unsafe_allow_html=True)
+st.markdown("<h1 style='color: red;'>Aplicación Estandarización de teléfonos nacionales</h1>", unsafe_allow_html=True)
+
 
 nombre_archivo = st.file_uploader("Selecciona un archivo", type=["txt"])
 
