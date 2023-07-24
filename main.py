@@ -20,7 +20,6 @@ st.markdown(
 # Contenedor principal
 separador_campos = ';'
 st.image("LogoSETI.jpeg", caption='SETI',  width=70)
-st.markdown("<div style='background-color: #FFFFFF; color: black; padding: 20px;'>", unsafe_allow_html=True)
 st.markdown("<h1 style='color: red;'>Aplicación Estandarización de teléfonos nacionales</h1>", unsafe_allow_html=True)
 
 # Imagen a la derecha en la parte principal
