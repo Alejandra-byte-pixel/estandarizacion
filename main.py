@@ -70,4 +70,5 @@ if nombre_archivo is not None:
     st.download_button('Download CSV', datos,file_name=name + '.csv')
 
 else:
-    st.warning("Por favor, selecciona un archivo para cargar.")
+    st.markdown("<p style='color: red;'>Por favor, selecciona un archivo para cargar.</p>", unsafe_allow_html=True)
+    
