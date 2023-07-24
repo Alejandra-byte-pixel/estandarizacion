@@ -17,9 +17,6 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-separador_campos = ';'
-st.title("Aplicación Estandarización de telefonos nacionales")
-
 # Contenedor principal
 separador_campos = ';'
 st.markdown("<div class='main'>", unsafe_allow_html=True)
