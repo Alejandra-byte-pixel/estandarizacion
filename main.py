@@ -22,10 +22,19 @@ separador_campos = ';'
 st.image("LogoSETI.jpeg", caption='SETI',  width=70)
 st.markdown("<h1 style='color: red;'>Aplicación Estandarización de teléfonos nacionales</h1>", unsafe_allow_html=True)
 
-# Imagen a la derecha en la parte principal
-#image = Image.open("LogoSETI.jpeg")
+st.sidebar.markdown(
+    """
+    <style>
+    .main {
+        background-color: #FFFFFF;
+        padding: 20px;
+        color: white;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
-#st.image(image, caption='SETI', width=200, use_column_width=False)
 
 # Barra lateral (sidebar)
 st.sidebar.markdown("<div style='background-color: #FFFFFF; color: black; padding: 20px;'>", unsafe_allow_html=True)
