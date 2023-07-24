@@ -3,7 +3,19 @@ import estandarizador
 import csv
 import pandas as pd
 
-
+# Establecer el color de fondo para la parte derech             a
+st.markdown(
+    """
+    <style>
+    .main {
+        background-color: #E61919;
+        padding: 20px;
+        color: white;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 # Contenedor principal
 separador_campos = ';'
