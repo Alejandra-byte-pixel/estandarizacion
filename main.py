@@ -22,6 +22,10 @@ separador_campos = ';'
 st.markdown("<div style='background-color: #FFFFFF; color: black; padding: 20px;'>", unsafe_allow_html=True)
 st.markdown("<h1 style='color: red;'>Aplicación Estandarización de teléfonos nacionales</h1>", unsafe_allow_html=True)
 
+# Imagen a la derecha en la parte principal
+image = Image.open("LogoSETI.jpeg")
+st.image(image, caption='SETI', width=50)
+
 # Barra lateral (sidebar)
 st.sidebar.markdown("<div style='background-color: #FFFFFF; color: black; padding: 20px;'>", unsafe_allow_html=True)
 st.sidebar.image("LogoAIO.jpeg", caption='ALL IN ONE', use_column_width=True)
