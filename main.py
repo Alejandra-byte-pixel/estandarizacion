@@ -13,7 +13,7 @@ st.markdown(
         color: white;
     }
     .column {
-        padding: 5px; /* Espacio entre las imágenes (10 píxeles) */
+        padding: 5px; 
     }
     </style>
     """,
