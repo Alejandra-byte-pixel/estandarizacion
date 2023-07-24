@@ -3,6 +3,8 @@ import estandarizador
 import csv
 import pandas as pd
 
+
+
 # Contenedor principal
 separador_campos = ';'
 st.markdown("<div style='background-color: #FFFFFF; color: black; padding: 20px;'>", unsafe_allow_html=True)
