@@ -3,32 +3,19 @@ import estandarizador
 import csv
 import pandas as pd
 
-# Establecer el color de fondo para toda la página
-st.markdown(
-    """
-    <style>
-    body {
-        background-color: #FFFFFF !important;
-        color: black;
-    }
-
-    .sidebar .sidebar-content {
-        background-color: #FFFFFF !important;
-        color: black;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
 # Contenedor principal
 separador_campos = ';'
+st.markdown("<div style='background-color: #FFFFFF; color: black; padding: 20px;'>", unsafe_allow_html=True)
 st.markdown("<h1 style='color: red;'>Aplicación Estandarización de teléfonos nacionales</h1>", unsafe_allow_html=True)
 
 # Barra lateral (sidebar)
+st.sidebar.markdown("<div style='background-color: #FFFFFF; color: black; padding: 20px;'>", unsafe_allow_html=True)
 st.sidebar.image("LogoAIO.jpeg", caption='ALL IN ONE', use_column_width=True)
 st.sidebar.markdown("<h1 style='text-align: center; color: black;'>Aquí cargue el archivo</h1>", unsafe_allow_html=True)
 nombre_archivo = st.sidebar.file_uploader("Cargue archivo TXT", type=["txt"], key="file-upload", help='Limite 200MB')
+st.sidebar.markdown("</div>", unsafe_allow_html=True)
+
+st.markdown("</div>", unsafe_allow_html=True)
 
 Dataframe1 = {"cadenas": [],
     "tipo":[],
