@@ -3,30 +3,11 @@ import estandarizador
 import csv
 import pandas as pd
 
-# Establecer el color de fondo para la parte derecha
+# Establecer el color de fondo para toda la página
 st.markdown(
     """
     <style>
-    .main {
-        background-color: #FFFFFF;
-        padding: 20px;
-        color: white;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
-# Contenedor principal
-separador_campos = ';'
-st.markdown("<div class='main'>", unsafe_allow_html=True)
-st.markdown("<h1 style='color: red;'>Aplicación Estandarización de teléfonos nacionales</h1>", unsafe_allow_html=True)
-
-# Barra lateral (sidebar)
-st.markdown(
-    """
-    <style>
-    .sidebar .sidebar-content {
+    body {
         background-color: #FFFFFF;
         color: black;
     }
@@ -35,6 +16,11 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+# Contenedor principal
+separador_campos = ';'
+st.markdown("<h1 style='color: red;'>Aplicación Estandarización de teléfonos nacionales</h1>", unsafe_allow_html=True)
+
+# Barra lateral (sidebar)
 st.sidebar.image("LogoAIO.jpeg", caption='ALL IN ONE', use_column_width=True)
 st.sidebar.markdown("<h1 style='text-align: center; color: black;'>Aquí cargue el archivo</h1>", unsafe_allow_html=True)
 nombre_archivo = st.sidebar.file_uploader("Cargue archivo TXT", type=["txt"], key="file-upload", help='Limite 200MB')
