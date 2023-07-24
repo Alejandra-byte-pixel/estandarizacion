@@ -29,7 +29,7 @@ image1 = st.image("LogoSETI.jpeg", caption='SETI',  width=70)
 col1.image(image1, caption='SETI', width=70)
 
 # Imagen 2
-image2 = st.image("LogoAIO.jpeg", caption='SETI',  width=10)
+image2 = st.image("LogoAIO.jpeg", caption='SETI',  width=5)
 col2.image(image2, caption='Otra Imagen', width=70)
 
 st.markdown("<h1 style='color: red;'>Aplicación Estandarización de teléfonos nacionales</h1>", unsafe_allow_html=True)
