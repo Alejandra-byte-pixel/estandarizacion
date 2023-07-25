@@ -30,7 +30,7 @@ st.markdown(
         color: black; /* Letras negras */
     }
     [data-testid="stSidebar"] {
-        background-color: rgb(255, 255, 255); /* Color de fondo original */
+        background-color: rgb(250, 250, 250); /* Color de fondo original */
         color: #FFFFFF; /* Color de letras original (blanco) */
     }
     [aria-selected="true"] {
