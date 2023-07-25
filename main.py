@@ -98,5 +98,5 @@ if nombre_archivo is not None:
     st.download_button('Download CSV', datos,file_name=name + '.csv')
 
 else:
-    st.markdown("<p style='color: red;'>Por favor, selecciona un archivo para cargar.</p>", unsafe_allow_html=True)
+    st.markdown("<p style='color: black;'>Por favor, selecciona un archivo para cargar.</p>", unsafe_allow_html=True)
     
