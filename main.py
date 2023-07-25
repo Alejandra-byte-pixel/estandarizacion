@@ -53,7 +53,7 @@ st.sidebar.markdown(
 
 # Barra lateral (sidebar)
 #st.sidebar.markdown("<div style='background-color: #FFFFFF; color: with; padding: 20px;'>", unsafe_allow_html=True)
-st.sidebar.markdown("<h1 style='text-align: center; color: black;'>Aquí cargue el archivo</h1>", unsafe_allow_html=True)
+st.sidebar.markdown("<h1 style='text-align: center; color: grey;'>Aquí cargue el archivo</h1>", unsafe_allow_html=True)
 nombre_archivo = st.sidebar.file_uploader("Cargue archivo TXT", type=["txt"], key="file-upload", help='Limite 200MB')
 st.sidebar.markdown("</div>", unsafe_allow_html=True)
 
@@ -98,5 +98,5 @@ if nombre_archivo is not None:
     st.download_button('Download CSV', datos,file_name=name + '.csv')
 
 else:
-    st.markdown("<p style='color: grey;'>Por favor, selecciona un archivo para cargar.</p>", unsafe_allow_html=True)
+    st.markdown("<p style='color: black;'>Por favor, selecciona un archivo para cargar.</p>", unsafe_allow_html=True)
     
