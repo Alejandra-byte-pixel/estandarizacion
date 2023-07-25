@@ -51,7 +51,7 @@ col1, col2 = st.columns(2)
 image1 = col1.image("LogoSETI.jpeg", caption='SETI', width=100)
 
 # Espacio entre las imágenes
-col1.write("Aplicación Estandarización de teléfonos nacionales")
+col1.write("")
 
 # Imagen 2
 image2 = col2.image("LogoAIO.jpeg", caption='AIO', width=100)
