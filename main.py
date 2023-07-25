@@ -4,21 +4,28 @@ import csv
 import pandas as pd
 
 # Establecer el color de fondo para la parte derecha
-st.markdown(
-    """
-    <style>
-    .main {
-        background-color: #FFFFFF;
-        padding: 20px;
-        color: white;
+st.markdown("""
+    <style type="text/css">
+    blockquote {
+        margin: 1em 0px 1em -1px;
+        padding: 0px 0px 0px 1.2em;
+        font-size: 20px;
+        border-left: 5px solid rgb(230, 234, 241);
+        # background-color: rgb(129, 164, 182);
     }
-    .column {
-        padding: 5px; 
+    blockquote p {
+        font-size: 30px;
+        color: #FFFFFF;
+    }
+    [data-testid=stSidebar] {
+        background-color: rgb(129, 164, 182);
+        color: #FFFFFF;
+    }
+    [aria-selected="true"] {
+         color: #000000;
     }
     </style>
-    """,
-    unsafe_allow_html=True
-)
+""", unsafe_allow_html=True)
 
 # Contenedor principal
 separador_campos = ';'
