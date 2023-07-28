@@ -17,7 +17,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# Establecer el estilo para el bloque de cita
+# Establecer Fondo para la barra izq
 st.markdown(
     """
     <style>
