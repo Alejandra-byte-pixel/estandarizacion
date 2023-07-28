@@ -65,7 +65,7 @@ separador_campos = ';'
 col1, col2 = st.columns([1, 3])
 
 # Imagen
-col1.image("LogoSetiAio.jpg", caption='Logo', width=200)
+col1.image("LogoSetiAio.jpg", caption='Logo', width=150)
 
 # Título
 col2.markdown("<h1 style='color: red;'>Aplicación Estandarización de teléfonos nacionales</h1>", unsafe_allow_html=True)
