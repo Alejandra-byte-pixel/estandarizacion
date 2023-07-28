@@ -49,15 +49,27 @@ separador_campos = ';'
 
 # Imagen 1
 #image1 = col1.image("LogoSETI.jpeg", caption='SETI', width=100)
-st.image("LogoSetiAio.jpg", caption='Logo', width=50)
-#st.markdown("<p style='text-align: center;'><img src='LogoSETI.jpeg' alt='Logo' width='200'></p>", unsafe_allow_html=True)
 # Espacio entre las imágenes
 #col1.write("")
 
 # Imagen 2
 #image2 = col2.image("LogoAIO.jpeg", caption='AIO', width=100)
 
-st.markdown("<h1 style='color: red;'>Aplicación Estandarización de teléfonos nacionales</h1>", unsafe_allow_html=True)
+#Una sola imagen 
+#st.image("LogoSetiAio.jpg", caption='Logo', width=50)
+
+#Titulo Solo 
+#st.markdown("<h1 style='color: red;'>Aplicación Estandarización de teléfonos nacionales</h1>", unsafe_allow_html=True)
+
+# Imágenes y el título
+col1, col2 = st.columns([2, 4])
+
+# Imagen
+col1.image("LogoSetiAio.jpg", caption='Logo', width=50)
+
+# Título
+col2.markdown("<h1 style='color: red;'>Aplicación Estandarización de teléfonos nacionales</h1>", unsafe_allow_html=True)
+
 
 st.sidebar.markdown(
     """
