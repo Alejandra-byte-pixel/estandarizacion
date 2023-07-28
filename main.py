@@ -40,6 +40,9 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+# Content of the left sidebar
+st.sidebar.title("Left Sidebar")
+st.sidebar.write("This is the left sidebar with a black border.")
 
 # Contenedor principal
 separador_campos = ';'
