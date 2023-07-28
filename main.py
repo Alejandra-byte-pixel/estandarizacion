@@ -106,7 +106,7 @@ col2.markdown("<h1 class='titulo'>Aplicación Estandarización de teléfonos nac
 # Barra lateral (sidebar)
 #st.sidebar.markdown("<div style='background-color: #FFFFFF; color: with; padding: 20px;'>", unsafe_allow_html=True)
 st.sidebar.markdown("<h1 style='text-align: center; color: grey;'>Aquí cargue el archivo</h1>", unsafe_allow_html=True)
-nombre_archivo = st.sidebar.file_uploader(" 🧩 Cargue archivo TXT", type=["txt"], key="file-upload", help='Limite 200MB')
+nombre_archivo = st.sidebar.file_uploader(" 🧩 <span style='color: black;'>Cargue archivo TXT</span>", type=["txt"], key="file-upload", help='Limite 200MB', unsafe_allow_html=True)
 st.sidebar.markdown("</div>", unsafe_allow_html=True)
 
 st.markdown("</div>", unsafe_allow_html=True)
