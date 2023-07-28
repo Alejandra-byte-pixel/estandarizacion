@@ -116,7 +116,7 @@ st.sidebar.markdown("<h1 style='text-align: center; color: black;'>Aquí cargue 
 nombre_archivo = st.sidebar.file_uploader(" 🧩 Cargue archivo TXT", type=["txt"], key="file-upload", help='Limite 200MB')
 #st.sidebar.markdown("<h1 style='text-align: center; color: black;'>Aquí cargue el archivo</h1>", unsafe_allow_html=True)
 #nombre_archivo = st.sidebar.file_uploader(" 🧩 Cargue archivo TXT",type=["txt"], key="file-upload", help='Limite 200MB')
-#st.sidebar.markdown("</div>", unsafe_allow_html=True)
+st.sidebar.markdown("</div>", unsafe_allow_html=True)
 
 st.markdown("</div>", unsafe_allow_html=True)
 
