@@ -75,7 +75,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# Estilo para la imagen y el título
+# Establecer el estilo para la imagen y el título
 estilo_imagen = """
     <style>
     .imagen {
@@ -84,15 +84,25 @@ estilo_imagen = """
     }
     .titulo {
         color: red;
-        display: inline-block;
-        vertical-align: middle;
-        margin-left: -10px; /* Margen izquierdo negativo para acercar el título a la barra de la izquierda */
+        font-size: 36px; /* Ajustar el tamaño del título */
+        line-height: 1.2; /* Ajustar el espacio entre líneas del título */
         margin-top: 0;
-        white-space: nowrap; /* Evita que el título se desborde y quede en una sola línea */
     }
     </style>
     """
 st.markdown(estilo_imagen, unsafe_allow_html=True)
+
+# Establecer el estilo para el contenedor principal (alineación centrada)
+estilo_contenedor_principal = """
+    <style>
+    .main {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    </style>
+    """
+st.markdown(estilo_contenedor_principal, unsafe_allow_html=True)
 
 # Contenedor principal
 col1, col2 = st.columns([1, 3])  
@@ -101,7 +111,7 @@ col1, col2 = st.columns([1, 3])
 col1.image("LogoSetiAio.jpg", caption='Logo', width=150)
 
 # Título
-col2.markdown("<h1 class='titulo'>Estandarización de teléfonos nacionales</h1>", unsafe_allow_html=True)
+col2.markdown("<h1 class='titulo'>Aplicación Estandarización de<br>teléfonos nacionales</h1>", unsafe_allow_html=True)
 
 # Barra lateral (sidebar)
 #st.sidebar.markdown("<div style='background-color: #FFFFFF; color: with; padding: 20px;'>", unsafe_allow_html=True)
