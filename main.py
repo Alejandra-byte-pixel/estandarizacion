@@ -148,7 +148,7 @@ if nombre_archivo is not None:
     st.dataframe(df)
 
     #Crear botón para descargar archivo csv
-    st.download_button('Descarga del .CSV', datos,file_name=name + '.csv')
+    st.download_button('🖨️ Descarga del .CSV', datos,file_name=name + '.csv')
 
 else:
     st.markdown("<p style='color: black;'>Por favor, selecciona un archivo para cargar.</p>", unsafe_allow_html=True)
