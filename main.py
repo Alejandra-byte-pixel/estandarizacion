@@ -18,28 +18,28 @@ st.markdown(
 )
 
 # Establecer el estilo para el bloque de cita
-st.markdown(
-    """
-    <style>
+st.markdown("""
+    <style type="text/css">
     blockquote {
-        background-color: #FFFFFF; /* Fondo blanco */
-        color: black; /* Letras negras */
+        margin: 1em 0px 1em -1px;
+        padding: 0px 0px 0px 1.2em;
+        font-size: 20px;
+        border-left: 5px solid rgb(230, 234, 241);
+        # background-color: rgb(129, 164, 182);
     }
     blockquote p {
         font-size: 30px;
-        color: black; /* Letras negras */
+        color: #FFFFFF;
     }
-    [data-testid="stSidebar"] {
-        background-color: rgb(254, 244, 244); /* Color de fondo original */
-        color: ##000000; /* Color de letras original (blanco) */
+    [data-testid=stSidebar] {
+        background-color: rgb(255, 255, 255);
+        color: #FFFFFF;
     }
     [aria-selected="true"] {
-        color: black; /* Letras negras */
+         color: #000000;
     }
     </style>
-    """,
-    unsafe_allow_html=True
-)
+""", unsafe_allow_html=True)
 
 # Contenedor principal
 separador_campos = ';'
