@@ -65,7 +65,9 @@ separador_campos = ';'
 col1, col2 = st.columns([1, 3])  
 
 # Imagen
-col1.image("LogoSetiAio.jpg", caption='Logo', width=100, use_column_width=True)
+col1.image("LogoSetiAio.jpg", caption='Logo', width=100, use_column_width=True, 
+           output_format="auto", use_container_width=True,
+           style="margin-left: -20px")
 
 # Título sin margen superior
 col2.markdown("<h1 style='color: red; margin-top: 0;'>Aplicación Estandarización de teléfonos nacionales</h1>", unsafe_allow_html=True)
