@@ -86,7 +86,7 @@ estilo_imagen = """
         color: red;
         display: inline-block;
         vertical-align: middle;
-        margin-left: 10px;
+        margin-left: -10px; /* Margen izquierdo negativo para acercar el título a la barra de la izquierda */
         margin-top: 0;
         white-space: nowrap; /* Evita que el título se desborde y quede en una sola línea */
     }
