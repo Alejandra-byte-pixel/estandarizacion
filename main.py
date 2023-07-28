@@ -2,8 +2,6 @@ import streamlit as st
 import estandarizador
 import csv
 import pandas as pd
-import gettext
-
 
 # Establecer el color de fondo para la parte derecha
 st.markdown(
