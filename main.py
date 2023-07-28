@@ -61,15 +61,14 @@ separador_campos = ';'
 #Titulo Solo 
 #st.markdown("<h1 style='color: red;'>Aplicación Estandarización de teléfonos nacionales</h1>", unsafe_allow_html=True)
 
-# Imágenes y el título
-col1, col2 = st.columns([1, 3])
+# Contenedor principal
+col1, col2 = st.columns([1, 3])  # Definir el ancho de las columnas (en este caso, 1 y 3)
 
 # Imagen
-col1.image("LogoSetiAio.jpg", caption='Logo', width=190)
+col1.image("LogoSetiAio.jpg", caption='Logo', width=100, use_column_width=True)
 
-# Título
-col2.markdown("<h1 style='color: red;'>Aplicación Estandarización de teléfonos nacionales</h1>", unsafe_allow_html=True)
-
+# Título sin margen superior
+col2.markdown("<h1 style='color: red; margin-top: 0;'>Aplicación Estandarización de teléfonos nacionales</h1>", unsafe_allow_html=True)
 
 st.sidebar.markdown(
     """
