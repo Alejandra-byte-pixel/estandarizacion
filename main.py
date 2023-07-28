@@ -111,27 +111,11 @@ col2.markdown("<h1 class='titulo'>Estandarización de teléfonos nacionales</h1>
 #st.sidebar.markdown("<div style='background-color: #FFFFFF; color: with; padding: 20px;'>", unsafe_allow_html=True)
 # Barra lateral (sidebar)
 # Cargar la imagen en el sidebar y alinearla a la derecha
-#st.sidebar.image("Archivo.jpg",caption='Logo', width=20, use_column_width=True)
-#st.sidebar.markdown("<h1 style='text-align: center; color: black;'>Aquí cargue el archivo</h1>", unsafe_allow_html=True)
-##nombre_archivo = st.sidebar.file_uploader(" 🧩 Cargue archivo TXT", type=["txt"], key="file-upload", help='Limite 200MB')
-
+st.sidebar.image("Archivo.jpg",caption='Logo', width=20, use_column_width=True)
+st.sidebar.markdown("<h1 style='text-align: center; color: black;'>Aquí cargue el archivo</h1>", unsafe_allow_html=True)
+nombre_archivo = st.sidebar.file_uploader(" 🧩 Cargue archivo TXT", type=["txt"], key="file-upload", help='Limite 200MB')
 #st.sidebar.markdown("<h1 style='text-align: center; color: black;'>Aquí cargue el archivo</h1>", unsafe_allow_html=True)
 #nombre_archivo = st.sidebar.file_uploader(" 🧩 Cargue archivo TXT",type=["txt"], key="file-upload", help='Limite 200MB')
-# Contenedor principal
-col1, col2 = st.columns([1, 3])  # Definir el ancho de las columnas (en este caso, 1 y 3)
-
-# Imagen
-col1.image("Archivo.jpg", caption='Logo', width=80, use_column_width=False, align='center')
-
-# Título
-col2.markdown("<h1 style='color: red;'>Estandarización de teléfonos nacionales</h1>", unsafe_allow_html=True)
-
-# Barra lateral (sidebar)
-st.sidebar.image("Archivo.jpg", caption='Logo', width=80, use_column_width=False)
-st.sidebar.markdown("<h1 style='text-align: center; color: black;'>Aquí cargue el archivo</h1>", unsafe_allow_html=True)
-st.sidebar.markdown("<br>")  # Agregar espacio antes del botón
-nombre_archivo = st.sidebar.file_uploader(" 🧩 Cargue archivo TXT", type=["txt"], key="file-upload", help='Limite 200MB', key="file-upload", text_align='center')
-
 st.sidebar.markdown("</div>", unsafe_allow_html=True)
 
 st.markdown("</div>", unsafe_allow_html=True)
