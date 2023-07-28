@@ -49,7 +49,7 @@ separador_campos = ';'
 
 # Imagen 1
 #image1 = col1.image("LogoSETI.jpeg", caption='SETI', width=100)
-st.sidebar.image("LogoAIO.jpeg", caption='ALL IN ONE', use_column_width=True, align='right')
+st.markdown("<p style='text-align: center;'><img src='LogoSETI.jpeg' alt='Logo' width='200'></p>", unsafe_allow_html=True)
 # Espacio entre las imágenes
 #col1.write("")
 
