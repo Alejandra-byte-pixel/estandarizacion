@@ -48,13 +48,13 @@ separador_campos = ';'
 #col1, col2 = st.columns(2)
 
 # Imagen 1
-image1 = col1.image("LogoSETI.jpeg", caption='SETI', width=100)
-
+#image1 = col1.image("LogoSETI.jpeg", caption='SETI', width=100)
+image("LogoSETI.jpeg", caption='SETI', width=100)
 # Espacio entre las imágenes
-col1.write("")
+#col1.write("")
 
 # Imagen 2
-image2 = col2.image("LogoAIO.jpeg", caption='AIO', width=100)
+#image2 = col2.image("LogoAIO.jpeg", caption='AIO', width=100)
 
 st.markdown("<h1 style='color: red;'>Aplicación Estandarización de teléfonos nacionales</h1>", unsafe_allow_html=True)
 
