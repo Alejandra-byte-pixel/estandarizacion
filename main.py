@@ -45,7 +45,7 @@ st.markdown(
 separador_campos = ';'
 
 # Crear dos columnas para las imágenes
-col1, col2 = st.columns(2)
+#col1, col2 = st.columns(2)
 
 # Imagen 1
 image1 = col1.image("LogoSETI.jpeg", caption='SETI', width=100)
