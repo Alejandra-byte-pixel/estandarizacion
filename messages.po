@@ -1,0 +1,13 @@
+msgid ""
+msgstr ""
+"Language: es\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+
+msgid "Aquí cargue el archivo"
+msgstr "Cargar archivo aquí"
+
+msgid " 🧩 Cargue archivo TXT"
+msgstr " 🧩 Cargar archivo TXT"
+
+msgid "Limite 200MB"
+msgstr "Límite 200MB"
