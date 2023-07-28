@@ -114,15 +114,6 @@ col1.image("LogoSetiAio.jpg", caption='Logo', width=150)
 # Título
 col2.markdown("<h1 class='titulo'>Aplicación Estandarización de<br>teléfonos nacionales</h1>", unsafe_allow_html=True)
 
-# Contenedor principal
-col1, col2 = st.columns([1, 3])  
-
-# Imagen
-col1.image("LogoSetiAio.jpg", caption='Logo', width=150)
-
-# Título
-col2.markdown("<h1 class='titulo'>Aplicación Estandarización de<br>teléfonos nacionales</h1>", unsafe_allow_html=True)
-
 # Barra lateral (sidebar)
 #st.sidebar.markdown("<div style='background-color: #FFFFFF; color: with; padding: 20px;'>", unsafe_allow_html=True)
 st.sidebar.markdown("<h1 style='text-align: center; color: black;'>Aquí cargue el archivo</h1>", unsafe_allow_html=True)
