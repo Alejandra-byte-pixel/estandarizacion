@@ -75,13 +75,11 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# Establecer el estilo para la imagen y el título
-estilo_imagen = """
+import streamlit as st
+
+# Establecer el estilo para el título
+estilo_titulo = """
     <style>
-    .imagen {
-        display: inline-block;
-        vertical-align: middle;
-    }
     .titulo {
         color: red;
         font-size: 36px; /* Ajustar el tamaño del título */
@@ -91,14 +89,13 @@ estilo_imagen = """
     }
     </style>
     """
-st.markdown(estilo_imagen, unsafe_allow_html=True)
+st.markdown(estilo_titulo, unsafe_allow_html=True)
 
 # Establecer el estilo para el contenedor principal (alineación centrada)
 estilo_contenedor_principal = """
     <style>
     .main {
         display: flex;
-        flex-direction: row;
         justify-content: center;
     }
     </style>
@@ -106,13 +103,24 @@ estilo_contenedor_principal = """
 st.markdown(estilo_contenedor_principal, unsafe_allow_html=True)
 
 # Contenedor principal
-col1, col2 = st.columns([1, 3])  
+st.grid(columns=(1, 3)) 
 
 # Imagen
-col1.image("LogoSetiAio.jpg", caption='Logo', width=150)
+st.image("LogoSetiAio.jpg", caption='Logo', width=150)
 
 # Título
-col2.markdown("<h1 class='titulo'>Aplicación Estandarización de<br>teléfonos nacionales</h1>", unsafe_allow_html=True)
+st.write("")
+st.write("")
+st.write("")
+st.write("")
+st.write("")
+st.write("")
+st.write("")
+st.write("")
+st.write("")
+st.write("")
+st.write("")
+st.markdown("<h1 class='titulo'>Aplicación Estandarización de<br>teléfonos nacionales</h1>", unsafe_allow_html=True)
 
 # Barra lateral (sidebar)
 #st.sidebar.markdown("<div style='background-color: #FFFFFF; color: with; padding: 20px;'>", unsafe_allow_html=True)
