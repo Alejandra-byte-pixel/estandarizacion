@@ -29,7 +29,7 @@ st.markdown("""
     }
     blockquote p {
         font-size: 30px;
-        color: #FFFFFF;
+        color: #000000;
     }
     [data-testid=stSidebar] {
         background-color: rgb(255, 255, 255);
