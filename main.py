@@ -94,7 +94,8 @@ st.markdown(estilo_imagen, unsafe_allow_html=True)
 col1, col2 = st.columns([1, 3])  
 
 # Imagen
-col1.markdown("<div class='imagen'><img src='LogoSetiAio.jpg' alt='Logo' width='150'></div>", unsafe_allow_html=True)
+col1.image("LogoSetiAio.jpg", caption='Logo', width=190)
+#col1.markdown("<div class='imagen'><img src='LogoSetiAio.jpg' alt='Logo' width='150'></div>", unsafe_allow_html=True)
 
 # Título
 col2.markdown("<h1 class='titulo'>Aplicación Estandarización de teléfonos nacionales</h1>", unsafe_allow_html=True)
