@@ -30,7 +30,7 @@ st.markdown(
         color: black; /* Letras negras */
     }
     [data-testid="stSidebar"] {
-        background-color: rgb(183, 179, 179 ); /* Color de fondo original */
+        background-color: rgb(254, 244, 244); /* Color de fondo original */
         color: #FFFFFF; /* Color de letras original (blanco) */
     }
     [aria-selected="true"] {
@@ -88,6 +88,7 @@ estilo_imagen = """
         vertical-align: middle;
         margin-left: 10px;
         margin-top: 0;
+        white-space: nowrap; /* Evita que el título se desborde y quede en una sola línea */
     }
     </style>
     """
