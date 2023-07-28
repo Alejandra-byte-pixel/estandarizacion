@@ -79,11 +79,14 @@ st.markdown(
 estilo_imagen = """
     <style>
     .imagen {
-        float: left;
-        margin-left: -30px;
+        display: inline-block;
+        vertical-align: middle;
     }
     .titulo {
         color: red;
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 10px;
         margin-top: 0;
     }
     </style>
@@ -91,15 +94,13 @@ estilo_imagen = """
 st.markdown(estilo_imagen, unsafe_allow_html=True)
 
 # Contenedor principal
-col1, col2 = st.columns([1,3])  
+col1, col2 = st.columns([1, 3])  
 
 # Imagen
 col1.image("LogoSetiAio.jpg", caption='Logo', width=170)
-#col1.markdown("<div class='imagen'><img src='LogoSetiAio.jpg' alt='Logo' width='150'></div>", unsafe_allow_html=True)
 
 # Título
 col2.markdown("<h1 class='titulo'>Aplicación Estandarización de teléfonos nacionales</h1>", unsafe_allow_html=True)
-
 
 # Barra lateral (sidebar)
 #st.sidebar.markdown("<div style='background-color: #FFFFFF; color: with; padding: 20px;'>", unsafe_allow_html=True)
