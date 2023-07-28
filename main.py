@@ -101,7 +101,7 @@ col1, col2 = st.columns([1, 3])
 col1.image("LogoSetiAio.jpg", caption='Logo', width=150)
 
 # Título
-col2.markdown("<h1 class='titulo'>Aplicación Estandarización de teléfonos nacionales</h1>", unsafe_allow_html=True)
+col2.markdown("<h1 class='titulo'>Estandarización de teléfonos nacionales</h1>", unsafe_allow_html=True)
 
 # Barra lateral (sidebar)
 #st.sidebar.markdown("<div style='background-color: #FFFFFF; color: with; padding: 20px;'>", unsafe_allow_html=True)
