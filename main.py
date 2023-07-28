@@ -31,7 +31,7 @@ st.markdown(
     }
     [data-testid="stSidebar"] {
         background-color: rgb(254, 244, 244); /* Color de fondo original */
-        color: #FFFFFF; /* Color de letras original (blanco) */
+        color: ##000000; /* Color de letras original (blanco) */
     }
     [aria-selected="true"] {
         color: black; /* Letras negras */
