@@ -62,7 +62,7 @@ separador_campos = ';'
 #st.markdown("<h1 style='color: red;'>Aplicación Estandarización de teléfonos nacionales</h1>", unsafe_allow_html=True)
 
 # Imágenes y el título
-col1, col2 = st.columns([2, 4])
+col1, col2 = st.columns([1, 3])
 
 # Imagen
 col1.image("LogoSetiAio.jpg", caption='Logo', width=50)
