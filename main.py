@@ -33,7 +33,7 @@ st.markdown("""
     }
     [data-testid=stSidebar] {
         background-color: rgb(255, 255, 255);
-        color: #FFFFFF;
+        color: #000000;
     }
     [aria-selected="true"] {
          color: #000000;
