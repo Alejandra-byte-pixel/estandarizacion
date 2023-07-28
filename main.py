@@ -4,12 +4,6 @@ import csv
 import pandas as pd
 import gettext
 
-# Establecer el idioma de traducción a español
-espanol = gettext.translation('messages', localedir='locales', languages=['es'])
-espanol.install()
-
-# Traducción para los textos en español
-_ = espanol.gettext
 
 # Establecer el color de fondo para la parte derecha
 st.markdown(
