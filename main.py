@@ -40,9 +40,6 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-# Content of the left sidebar
-st.sidebar.title("Left Sidebar")
-st.sidebar.write("This is the left sidebar with a black border.")
 
 # Contenedor principal
 separador_campos = ';'
@@ -150,7 +147,7 @@ if nombre_archivo is not None:
     st.dataframe(df)
 
     #Crear botón para descargar archivo csv
-    st.download_button('Download CSV', datos,file_name=name + '.csv')
+    st.download_button('Descarga del .CSV', datos,file_name=name + '.csv')
 
 else:
     st.markdown("<p style='color: black;'>Por favor, selecciona un archivo para cargar.</p>", unsafe_allow_html=True)
