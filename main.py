@@ -87,6 +87,7 @@ estilo_imagen = """
         font-size: 36px; /* Ajustar el tamaño del título */
         line-height: 1.2; /* Ajustar el espacio entre líneas del título */
         margin-top: 0;
+        margin-left: 20px; /* Ajustar el espacio entre la imagen y el título */
     }
     </style>
     """
@@ -103,6 +104,15 @@ estilo_contenedor_principal = """
     </style>
     """
 st.markdown(estilo_contenedor_principal, unsafe_allow_html=True)
+
+# Contenedor principal
+col1, col2 = st.columns([1, 3])  
+
+# Imagen
+col1.image("LogoSetiAio.jpg", caption='Logo', width=150)
+
+# Título
+col2.markdown("<h1 class='titulo'>Aplicación Estandarización de<br>teléfonos nacionales</h1>", unsafe_allow_html=True)
 
 # Contenedor principal
 col1, col2 = st.columns([1, 3])  
