@@ -80,11 +80,36 @@ import streamlit as st
 # Contenedor principal
 col1, col2 = st.columns([1, 3])  # Definir el ancho de las columnas (en este caso, 1 y 3)
 
+# Estilo para la imagen y el título
+estilo_imagen_titulo = """
+    <style>
+    .imagen-titulo-container {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .imagen {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .titulo {
+        color: red;
+        font-size: 36px;
+        line-height: 1.2;
+        margin-left: 10px;
+        margin-top: 0;
+    }
+    </style>
+    """
+st.markdown(estilo_imagen_titulo, unsafe_allow_html=True)
+
 # Imagen
-col1.image("LogoSetiAio.jpg", caption='Logo', width=100, use_column_width=True)
+with col1:
+    st.markdown("<div class='imagen-titulo-container'><img class='imagen' src='LogoSetiAio.jpg' alt='Logo' width='100'></div>", unsafe_allow_html=True)
 
 # Título
-col2.markdown("<h1 style='color: red;'>Estandarización de teléfonos nacionales</h1>", unsafe_allow_html=True)
+with col2:
+    st.markdown("<div class='imagen-titulo-container'><h1 class='titulo'>Estandarización de teléfonos nacionales</h1></div>", unsafe_allow_html=True)
+
 
 # Barra lateral (sidebar)
 #st.sidebar.markdown("<div style='background-color: #FFFFFF; color: with; padding: 20px;'>", unsafe_allow_html=True)
