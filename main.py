@@ -97,7 +97,7 @@ col2.markdown("<h1 class='titulo'>Estandarización de teléfonos nacionales</h1>
 # Cargar la imagen en el sidebar y alinearla a la derecha
 st.sidebar.image("Archivo.jpg",caption='Logo', width=80, use_column_width=True)
 st.sidebar.markdown("<h1 style='text-align: center; color: white;'>Aquí cargue el archivo</h1>", unsafe_allow_html=True)
-nombre_archivo = st.sidebar.file_uploader(" 🧩 Cargue archivo TXT", type=["txt"], key="file-upload", help='Limite 200MB')
+nombre_archivo = st.sidebar.file_uploader(" 🧩 ", type=["txt"], key="file-upload", help='Limite 200MB')
 #st.sidebar.markdown("<h1 style='text-align: center; color: black;'>Aquí cargue el archivo</h1>", unsafe_allow_html=True)
 #nombre_archivo = st.sidebar.file_uploader(" 🧩 Cargue archivo TXT",type=["txt"], key="file-upload", help='Limite 200MB')
 st.sidebar.markdown("</div>", unsafe_allow_html=True)
