@@ -42,7 +42,7 @@ st.markdown(
 )
 
 # Contenedor principal
-separador_campos = ';'
+#separador_campos = ';'
 
 # Crear dos columnas para las imágenes
 #col1, col2 = st.columns(2)
