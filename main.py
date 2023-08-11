@@ -61,24 +61,8 @@ st.markdown(
 #Titulo Solo 
 #st.markdown("<h1 style='color: red;'>Aplicación Estandarización de teléfonos nacionales</h1>", unsafe_allow_html=True)
 
-# Establecer el color de fondo para la parte derecha
-st.markdown(
-    """
-    <style>
-    .main {
-        background-color: #FFFFFF;
-        padding: 0;
-        color: white;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
-import streamlit as st
-
 # Contenedor principal
-col1, col2 = st.columns([1, 3])  # Definir el ancho de las columnas (en este caso, 1 y 3)
+#col1, col2 = st.columns([1, 3])  # Definir el ancho de las columnas (en este caso, 1 y 3)
 
 # Estilo para la imagen y el título
 estilo_imagen = """
