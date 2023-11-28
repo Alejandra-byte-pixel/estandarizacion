@@ -1,6 +1,6 @@
 import streamlit as st
 
-# Establecer el color de fondo para la parte derecha
+# fondo para la parte derecha
 st.markdown(
     """
     <style>
