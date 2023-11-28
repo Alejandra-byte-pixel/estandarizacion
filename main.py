@@ -66,7 +66,7 @@ st.set_page_config(layout="wide")
 # Diccionario de opciones
 dashboards = {
     "Telefonos": front,
-    "Direcciones": escenario_main,
+    "Direcciones": Escenario_2_Optimizado,
 }
 
 # Barra lateral para seleccionar el dashboard
