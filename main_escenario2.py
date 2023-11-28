@@ -65,7 +65,7 @@ col1.image("LogoSetiAio.jpg", caption='Logo', width=100, use_column_width=True)
 # Título
 col2.markdown("<h1 class='titulo'>Estandarización de direcciones nacionales</h1>", unsafe_allow_html=True)
 
-st.sidebar.image("Archivo.jpg",caption='Logo', width=80, use_column_width=True)
+st.sidebar.image("casa.jpg",caption='Logo', width=80, use_column_width=True)
 st.sidebar.markdown("<h1 style='text-align: center; color: white;'>Aquí cargue el archivo</h1>", unsafe_allow_html=True)
 nombre_archivo = st.sidebar.file_uploader(" 🧩 ", type=["txt"], key="file-upload", help='Limite 200MB')
 #st.sidebar.markdown("<h1 style='text-align: center; color: black;'>Aquí cargue el archivo</h1>", unsafe_allow_html=True)
