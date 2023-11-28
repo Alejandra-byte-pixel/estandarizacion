@@ -4,6 +4,9 @@ import os
 from front import main as Telefonos
 from Escenario_2_Optimizado import main as Direcciones
 
+# Definir root 
+root = os.path.dirname(__file__)
+
 # Establecer el color de fondo para la parte derecha
 st.markdown(
     """
