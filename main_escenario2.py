@@ -7,30 +7,37 @@ st.markdown(
     .main {
         background-color: #FFFFFF;
         padding: 0;
-        color: white;
+        color: black;
     }
     </style>
     """,
     unsafe_allow_html=True
 )
 
-# Estilo para la imagen y el título
-estilo_imagen = """
+# Establecer Fondo para la barra izq
+st.markdown(
+    """
     <style>
-    .imagen {
-        display: inline-block;
-        vertical-align: middle;
+    blockquote {
+        background-color: #FFFFFF; /* Fondo blanco */
+        color: black; /* Letras negras */
     }
-    .titulo {
-        color: red;
-        display: inline-block;
-        vertical-align: middle;
-        margin-left: 10px;
-        margin-top: 0;
+    blockquote p {
+        font-size: 30px;
+        color: black; /* Letras negras */
+    }
+    [data-testid="stSidebar"] {
+        background-color: rgb(0, 0, 0); /* Color de fondo original */
+        color: #000000; /* Color de letras original (blanco) */
+    }
+    [aria-selected="true"] {
+        color: black; /* Letras negras */
     }
     </style>
-    """
-st.markdown(estilo_imagen, unsafe_allow_html=True)
+    """,
+    unsafe_allow_html=True
+)
+
 
 # Contenedor principal
 col1, col2 = st.columns([1, 3])  # Definir el ancho de las columnas (en este caso, 1 y 3)
