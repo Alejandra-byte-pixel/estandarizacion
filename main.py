@@ -20,7 +20,7 @@ path = dashboards[choice]
 with open(path, encoding="utf-8") as code:
     c = code.read()
     exec(c, globals())
-    with st.expander('Code for this example:'):
+    with st.expander(''):
         st.markdown(f"""``` python
 {c}```""")
 
