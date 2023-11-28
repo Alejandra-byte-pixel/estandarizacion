@@ -8,12 +8,12 @@ root = os.path.join(os.path.dirname(__file__))
 dashboards = {
     "Telefonos": os.path.join(root, "front.py"),
     "Direcciones": os.path.join(root, "main_escenario2.py")
-    }
+}
 
-choice_from_url = query_params = st.experimental_get_query_params().get("example", ["Main Example"])[0]
-index = list(dashboards.keys()).index(choice_from_url)
+choice_from_url = st.experimental_get_query_params().get("example", ["Telefonos"])[0]
+index = list(dashboards.keys()).index(choice_from_url) if choice_from_url in dashboards else 0
 
-choice = st.sidebar.radio("Examples", list(dashboards.keys()), index=index)
+choice = st.sidebar.radio("Seleccionar Programa", list(dashboards.keys()), index=index)
 
 path = dashboards[choice]
 
