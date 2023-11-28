@@ -59,21 +59,27 @@ estilo_imagen = """
     """
 st.markdown(estilo_imagen, unsafe_allow_html=True)
 
-
+#seleccion de Programa
+# Configuración de la página
 st.set_page_config(layout="wide")
-root = os.path.join(os.path.dirname(__file__))
 
+# Diccionario de opciones
 dashboards = {
-    "Telefonos": os.path.join(root, "front.py"),
-    "Direcciones": os.path.join(root, "Escenario_2_Optimizado.py"),
+    "Telefonos": front,
+    "Direcciones": escenario_main,
 }
 
-choice_from_url = query_params = st.experimental_get_query_params().get("example", ["Main Example"])[0]
+# Barra lateral para seleccionar el dashboard
+choice_from_url = query_params = st.experimental_get_query_params().get("example", ["Telefonos"])[0]
 index = list(dashboards.keys()).index(choice_from_url)
 
-choice = st.sidebar.radio("Examples", list(dashboards.keys()), index=index)
+choice = st.sidebar.radio("Seleccionar Programa", list(dashboards.keys()), index=index)
 
-path = dashboards[choice]
+# Obtener la función del dashboard seleccionado
+dashboard_func = dashboards[choice]
+
+# Ejecutar la función del dashboard seleccionado
+dashboard_func()
 
 with open(path, encoding="utf-8") as code:
     c = code.read()
