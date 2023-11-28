@@ -1,7 +1,23 @@
+import streamlit as st
 import estandarizador_escenario2
 from multiprocessing import Pool
 import time
 inicio = time.time()
+
+# Establecer el color de fondo para la parte derecha
+st.markdown(
+    """
+    <style>
+    .main {
+        background-color: #FFFFFF;
+        padding: 0;
+        color: white;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 
 def get_diccionario(diccionario: dict):
     dictionary_depurado: dict = {}
