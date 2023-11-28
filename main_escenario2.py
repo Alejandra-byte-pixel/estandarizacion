@@ -1,7 +1,4 @@
 import streamlit as st
-import estandarizador_escenario2
-from multiprocessing import Pool
-
 
 # Establecer el color de fondo para la parte derecha
 st.markdown(
