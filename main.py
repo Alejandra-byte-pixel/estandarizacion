@@ -1,6 +1,8 @@
 from multiprocessing.sharedctypes import Value
 import streamlit as st
 import os
+from front import main as Telefonos
+from Escenario_2_Optimizado import main as Direcciones
 
 # Establecer el color de fondo para la parte derecha
 st.markdown(
