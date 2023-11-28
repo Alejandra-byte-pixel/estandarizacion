@@ -6,7 +6,7 @@ st.set_page_config(layout="wide")
 root = os.path.join(os.path.dirname(__file__))
 
 dashboards = {
-    "Telefonos": os.path.join(root, "front.py"),
+    "Teléfonos": os.path.join(root, "front.py"),
     "Direcciones": os.path.join(root, "main_escenario2.py")
 }
 
