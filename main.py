@@ -16,11 +16,3 @@ index = list(dashboards.keys()).index(choice_from_url) if choice_from_url in das
 choice = st.sidebar.radio("Seleccionar Programa", list(dashboards.keys()), index=index)
 
 path = dashboards[choice]
-
-with open(path, encoding="utf-8") as code:
-    c = code.read()
-    exec(c, globals())
-    with st.expander(''):
-        st.markdown(f"""``` python
-{c}```""")
-
