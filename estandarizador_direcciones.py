@@ -1,5 +1,6 @@
 import streamlit as st
-import estandarizador_escenario2
+import csv
+import pandas as pd
 from multiprocessing import Pool
 
 # fondo para la parte derecha
@@ -68,32 +69,13 @@ col1.image("LogoSetiAio.jpg", caption='AIO', width=100, use_column_width=True)
 col2.markdown("<h1 class='titulo'>Estandarización de direcciones nacionales</h1>", unsafe_allow_html=True)
 
 
-def get_diccionario(diccionario: dict):
-    dictionary_depurado: dict = {}
-    if diccionario is not None:
-        for i in diccionario.keys():
-            if diccionario[i] != "":
-                dictionary_depurado[i] = diccionario[i]
-        return dictionary_depurado
-    else:
-        return dictionary_depurado
-
-def procesar_direccion(direccion):
-    componentes = estandarizador_escenario2.estandarizar_direccion(direccion)
-    return direccion, get_diccionario(componentes)
-
-
-def procesar_archivo(archivo_entrada, archivo_salida):
-    with open(archivo_entrada, 'r') as f:
-        lista_direcciones = f.read().splitlines()
-
-    with Pool(processes=8) as pool:
-        resultados = pool.map(procesar_direccion, lista_direcciones)
-
-    with open(archivo_salida, 'w') as f:
-        for direccion, diccionario in resultados:
-            f.write(f"{direccion}\n{diccionario}\n-------------------------------------------\n")
-
+def procesar_direccion(cadena):
+    palabras = cadena.split()
+    campo1 = " ".join(palabras)
+    campo2 = " ".join(palabras[:-2])
+    campo3 = palabras[-2]
+    campo4 = "si"
+    return [campo1, campo2, campo3, campo4]
 
 st.sidebar.image("casa.jpg",caption='Direcciones', width=80, use_column_width=True)
 st.sidebar.markdown("<h1 style='text-align: center; color: white;'>Aquí cargue el archivo</h1>", unsafe_allow_html=True)
@@ -104,5 +86,32 @@ st.sidebar.markdown("</div>", unsafe_allow_html=True)
 
 st.markdown("</div>", unsafe_allow_html=True)
 
+def procesar_archivo(archivo_entrada):
+    with open(nombre_archivo, 'r') as f:
+        lineas = f.readlines()
 
+    resultados = [procesar_direccion(linea.strip()) for linea in lineas]
+
+    return resultados
+
+if __name__ == '__main__':
+    st.title("Procesador de Direcciones")
+
+      if archivo_entrada is not None:
+        # Procesar el archivo y obtener los resultados
+        resultados = procesar_archivo(archivo_entrada)
+        
+        # Crear un CSV en memoria
+        csv_data = StringIO()
+        csv_writer = csv.writer(csv_data)
+        csv_writer.writerow(["Campo1", "Campo2", "Campo3", "Campo4"])
+        csv_writer.writerows(resultados)
+
+        # Botón de descarga
+        st.download_button(
+            label="Descargar CSV",
+            data=csv_data.getvalue(),
+            file_name="resultados.csv",
+            key="csv_button"
+        )
 
