@@ -79,13 +79,12 @@ st.sidebar.markdown("</div>", unsafe_allow_html=True)
 st.markdown("</div>", unsafe_allow_html=True)
 
 Dataframe1 = {"cadenas": [],
-    "tipo":[],
-    "indicativos pais": [],
-    "indicativos area": [],
-    "telefonos": [],
-    "estandarizacion final": []
+              "tipo":[],
+              "indicativos pais": [],
+              "indicativos area": [],
+              "telefonos": [],
+              "estandarizacion final": []
 }
-
 
 if nombre_archivo is not None:
     contenido = nombre_archivo.read().decode("utf-8")  # Leer el contenido del archivo
@@ -96,8 +95,8 @@ if nombre_archivo is not None:
     
     for fila in lector_csv:
         linea = fila[0]  # Obtener el primer elemento de la fila como la línea a procesar
-        resultado = estandarizador.estandarizar(linea)  # Obtener el resultado como una lista
- resultado_str = linea + ";" + ";".join(str(item) for item in resultado)  # Convertir cada elemento en una cadena de texto
+        resultado = estandarizador_direcciones.estandarizar(linea)  # Obtener el resultado como una lista
+        resultado_str = linea + ";" + ";".join(str(item) for item in resultado)  # Convertir cada elemento en una cadena de texto
         datos += resultado_str + '\r\n'
 
     # Crear un DataFrame con los resultados
@@ -107,8 +106,8 @@ if nombre_archivo is not None:
     st.write("Resultado:")
     st.dataframe(df)
 
-    #Crear botón para descargar archivo csv
-    st.download_button('🖨️ Descarga del .CSV', datos,file_name=name + '.csv')
+    # Crear botón para descargar archivo csv
+    st.download_button('🖨️ Descarga del .CSV', datos, file_name=name + '.csv')
 
 else:
     st.markdown("<p style='color: black;'>Por favor, selecciona un archivo para cargar.</p>", unsafe_allow_html=True)
