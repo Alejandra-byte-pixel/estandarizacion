@@ -78,4 +78,38 @@ st.sidebar.markdown("</div>", unsafe_allow_html=True)
 
 st.markdown("</div>", unsafe_allow_html=True)
 
+Dataframe1 = {"ADDRESS": [],
+              "ADDR_LINE_ONE": [],
+              "ADDR_LINE_TWO": [],
+              "ADDR_LINE_THREE": []
+}
 
+if nombre_archivo is not None:
+    contenido = nombre_archivo.read().decode("utf-8")  # Leer el contenido del archivo
+    name = nombre_archivo.name.split('.')[0]
+
+    datos = "ADDRESS;ADDR_LINE_ONE;ADDR_LINE_TWO;ADDR_LINE_THREE" + '\r\n'
+    lector_csv = csv.reader(contenido.splitlines())
+    
+    for fila in lector_csv:
+        linea = fila[0]  # Obtener el primer elemento de la fila como la línea a procesar
+        resultado = estandarizador_direcciones.estandarizar(linea)  # Obtener el resultado como una lista
+        Dataframe1["ADDRESS"].append(linea)
+        Dataframe1["ADDR_LINE_ONE"].append(resultado[0])
+        Dataframe1["ADDR_LINE_TWO"].append(resultado[1])
+        Dataframe1["ADDR_LINE_THREE"].append(resultado[2])
+        resultado_str = linea + ";" + ";".join(str(item) for item in resultado)  # Convertir cada elemento en una cadena de texto
+        datos += resultado_str + '\r\n'
+
+    # Crear un DataFrame con los resultados
+    df = pd.DataFrame(Dataframe1)
+
+    # Mostrar el resultado en una tabla
+    st.write("Resultado:")
+    st.dataframe(df)
+
+    # Crear botón para descargar archivo csv
+    st.download_button('🖨️ Descarga del .CSV', datos, file_name=name + '.csv')
+
+else:
+    st.markdown("<p style='color: black;'>Por favor, selecciona un archivo para cargar.</p>", unsafe_allow_html=True)
