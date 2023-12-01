@@ -90,7 +90,7 @@ if nombre_archivo is not None:
     contenido = nombre_archivo.read().decode("utf-8")  # Leer el contenido del archivo
     name = nombre_archivo.name.split('.')[0]
 
-    datos = "CADENA;TIPO;INDICATIVO PAIS;INDICATIVO AREA;TELEFONO;ESTANDARIZACION FINAL" + '\r\n'
+    datos = "ADDRESS;ADDR_LINE_ONE;ADDR_LINE_TWO;ADDR_LINE_THREE" + '\r\n'
     lector_csv = csv.reader(contenido.splitlines())
     
     for fila in lector_csv:
