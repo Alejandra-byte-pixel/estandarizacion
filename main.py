@@ -7,7 +7,7 @@ root = os.path.join(os.path.dirname(__file__))
 
 dashboards = {
     "Teléfonos": os.path.join(root, "front.py"),
-    "Direcciones": os.path.join(root, "estandarizador_direcciones.py")
+    "Direcciones": os.path.join(root, "main_escenario2.py")
 }
 
 choice_from_url = st.experimental_get_query_params().get("example", ["Telefonos"])[0]
