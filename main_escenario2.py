@@ -21,8 +21,8 @@ st.markdown(
     """
     <style>
     blockquote {
-        background-color: #FFFFFF; /* Fondo blanco */
-        color: black; /* Letras negras */
+        background-color: #FFFFFF; /* Fondo */
+        color: white; /* Letras */
     }
     blockquote p {
         font-size: 30px;
