@@ -102,6 +102,8 @@ if nombre_archivo is not None:
         resultado_str = linea + ";" + ";".join(str(item) for item in resultado)  # Convertir cada elemento en una cadena de texto
         datos += resultado_str + '\r\n'
 
+    print(dir(estandarizador_direcciones))
+
     # Crear un DataFrame con los resultados
     df = pd.DataFrame(Dataframe1)
 
