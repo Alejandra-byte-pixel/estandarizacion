@@ -78,12 +78,10 @@ st.sidebar.markdown("</div>", unsafe_allow_html=True)
 
 st.markdown("</div>", unsafe_allow_html=True)
 
-Dataframe1 = {"cadenas": [],
-              "tipo":[],
-              "indicativos pais": [],
-              "indicativos area": [],
-              "telefonos": [],
-              "estandarizacion final": []
+Dataframe1 = {"ADDRESS": [],
+              "ADDR_LINE_ONE":[],
+              "ADDR_LINE_TWO": [],
+              "ADDR_LINE_THREE": []
 }
 
 if nombre_archivo is not None:
