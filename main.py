@@ -17,8 +17,9 @@ choice = st.sidebar.radio("Seleccionar Programa", list(dashboards.keys()), index
 
 path = dashboards[choice]
 
+
 with open(path, encoding="utf-8") as code:
     c = code.read()
+    print("Ejecutando código:")
+    print(c)
     exec(c, globals())
-
-
