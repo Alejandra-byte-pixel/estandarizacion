@@ -1,4 +1,4 @@
-def procesar_direccion(cadena):
+def estandarizar(cadena):
     palabras = cadena.split()
     ADDRESS = " ".join(palabras)
     ADDR_LINE_ONE = " ".join(palabras[:-2])
