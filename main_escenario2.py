@@ -79,7 +79,7 @@ st.sidebar.markdown("</div>", unsafe_allow_html=True)
 
 st.markdown("</div>", unsafe_allow_html=True)
 
-Dataframe1 = {"ADDRESS": [],
+Dataframe2 = {"ADDRESS": [],
               "ADDR_LINE_ONE": [],
               "ADDR_LINE_TWO": [],
               "ADDR_LINE_THREE": []
@@ -95,17 +95,15 @@ if nombre_archivo is not None:
     for fila in lector_csv:
         linea = fila[0]  # Obtener el primer elemento de la fila como la línea a procesar
         resultado = estandarizador_direcciones.estandarizar(linea)  # Obtener el resultado como una lista
-        Dataframe1["ADDRESS"].append(linea)
-        Dataframe1["ADDR_LINE_ONE"].append(resultado[0])
-        Dataframe1["ADDR_LINE_TWO"].append(resultado[1])
-        Dataframe1["ADDR_LINE_THREE"].append(resultado[2])
+        Dataframe2["ADDRESS"].append(linea)
+        Dataframe2["ADDR_LINE_ONE"].append(resultado[0])
+        Dataframe2["ADDR_LINE_TWO"].append(resultado[1])
+        Dataframe2["ADDR_LINE_THREE"].append(resultado[2])
         resultado_str = linea + ";" + ";".join(str(item) for item in resultado)  # Convertir cada elemento en una cadena de texto
         datos += resultado_str + '\r\n'
 
-    print(dir(estandarizador_direcciones))
-
     # Crear un DataFrame con los resultados
-    df = pd.DataFrame(Dataframe1)
+    df = pd.DataFrame(Dataframe2)
 
     # Mostrar el resultado en una tabla
     st.write("Resultado:")
