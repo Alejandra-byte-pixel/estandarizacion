@@ -17,7 +17,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.set_page_config(layout="wide")
+st.set_page_config()
 root = os.path.join(os.path.dirname(__file__))
 
 dashboards = {
