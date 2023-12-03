@@ -83,6 +83,8 @@ Dataframe2 = {"ADDRESS": [],
               "ADDR_LINE_THREE": []
 }
 
+datos = ""
+
 if nombre_archivo is not None:
     contenido = nombre_archivo.read().decode("utf-8")  # Leer el contenido del archivo
     name = nombre_archivo.name.split('.')[0]
