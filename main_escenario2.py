@@ -94,10 +94,10 @@ if nombre_archivo is not None:
 
     for linea in lineas:
         resultado = estandarizador_direcciones.estandarizar(linea)
-        Dataframe2["ADDRESS"].append(linea)
-        Dataframe2["ADDR_LINE_ONE"].append(resultado[0])
-        Dataframe2["ADDR_LINE_TWO"].append(resultado[1])
-        Dataframe2["ADDR_LINE_THREE"].append(resultado[2])
+        Dataframe2["ADDRESS"].append(resultado[0])
+        Dataframe2["ADDR_LINE_ONE"].append(resultado[1])
+        Dataframe2["ADDR_LINE_TWO"].append(resultado[2])
+        Dataframe2["ADDR_LINE_THREE"].append(resultado[3])
         resultado_str = linea + ";" + ";".join(str(item) for item in resultado)
         datos += resultado_str + '\r\n'
 
