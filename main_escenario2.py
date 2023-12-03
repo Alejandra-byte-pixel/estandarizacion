@@ -70,11 +70,9 @@ col2.markdown("<h1 class='titulo'>Estandarización de direcciones nacionales</h1
 
 
 
-st.sidebar.image("casa.jpg",caption='Direcciones', width=80, use_column_width=True)
+st.sidebar.image("casa.jpg", caption='Direcciones', width=80, use_column_width=True)
 st.sidebar.markdown("<h1 style='text-align: center; color: white;'>Aquí cargue el archivo</h1>", unsafe_allow_html=True)
 nombre_archivo = st.sidebar.file_uploader(" 🧩 ", type=["txt"], key="file-upload", help='Limite 200MB')
-#st.sidebar.markdown("<h1 style='text-align: center; color: black;'>Aquí cargue el archivo</h1>", unsafe_allow_html=True)
-#nombre_archivo = st.sidebar.file_uploader(" 🧩 Cargue archivo TXT",type=["txt"], key="file-upload", help='Limite 200MB')
 st.sidebar.markdown("</div>", unsafe_allow_html=True)
 
 st.markdown("</div>", unsafe_allow_html=True)
@@ -89,11 +87,10 @@ if nombre_archivo is not None:
     contenido = nombre_archivo.read().decode("utf-8")  # Leer el contenido del archivo
     name = nombre_archivo.name.split('.')[0]
 
-    datos = "ADDRESS;ADDR_LINE_ONE;ADDR_LINE_TWO;ADDR_LINE_THREE" + '\r\n'
-    lector_csv = csv.reader(contenido.splitlines())
+    # Solo cambia esta línea para leer las líneas del archivo directamente
+    lineas = contenido.splitlines()
     
-    for fila in lector_csv:
-        linea = fila[0]  # Obtener el primer elemento de la fila como la línea a procesar
+    for linea in lineas:
         resultado = estandarizador_direcciones.estandarizar(linea)  # Obtener el resultado como una lista
         Dataframe2["ADDRESS"].append(linea)
         Dataframe2["ADDR_LINE_ONE"].append(resultado[0])
