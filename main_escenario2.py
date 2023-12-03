@@ -83,22 +83,21 @@ Dataframe2 = {"ADDRESS": [],
               "ADDR_LINE_THREE": []
 }
 
-datos = ""
+datos = ""  # Agrega esta línea para inicializar la variable datos
 
 if nombre_archivo is not None:
-    contenido = nombre_archivo.read().decode("utf-8")  # Leer el contenido del archivo
+    contenido = nombre_archivo.read().decode("utf-8")
     name = nombre_archivo.name.split('.')[0]
 
-    # Solo cambia esta línea para leer las líneas del archivo directamente
     lineas = contenido.splitlines()
-    
+
     for linea in lineas:
-        resultado = estandarizador_direcciones.estandarizar(linea)  # Obtener el resultado como una lista
+        resultado = estandarizador_direcciones.estandarizar(linea)
         Dataframe2["ADDRESS"].append(linea)
         Dataframe2["ADDR_LINE_ONE"].append(resultado[0])
         Dataframe2["ADDR_LINE_TWO"].append(resultado[1])
         Dataframe2["ADDR_LINE_THREE"].append(resultado[2])
-        resultado_str = linea + ";" + ";".join(str(item) for item in resultado)  # Convertir cada elemento en una cadena de texto
+        resultado_str = linea + ";" + ";".join(str(item) for item in resultado)
         datos += resultado_str + '\r\n'
 
     # Crear un DataFrame con los resultados
