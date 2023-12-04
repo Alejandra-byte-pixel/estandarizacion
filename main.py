@@ -7,8 +7,8 @@ st.set_page_config(layout="wide")
 root = os.path.join(os.path.dirname(__file__))
 
 dashboards = {
-    "Teléfonos": os.path.join(root, "front.py"),
-    "Direcciones": os.path.join(root, "main_escenario2.py")
+    "Teléfonos": os.path.join(root, "main_telefonos.py"),
+    "Direcciones": os.path.join(root, "main_direcciones.py")
 }
 
 choice_from_url = st.experimental_get_query_params().get("example", ["Telefonos"])[0]
