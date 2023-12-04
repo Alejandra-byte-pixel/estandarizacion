@@ -109,27 +109,7 @@ if nombre_archivo is not None:
     st.dataframe(df)
 
     # Crear botón para descargar archivo csv
-    st.download_button(
-    '🖨️ Descarga del .CSV',
-    datos,
-    file_name=name + '.csv',
-    key="custom_button",
-    help="Haz clic para descargar el archivo CSV",
-    on_click=None,
-    args=None,
-    kwargs=None,
-    disabled=False,
-    use_container_width=False,
-    key_display="Descargar CSV",
-    help_displayed=True,
-    disable_after_click=False,
-    use_container_width_style=False,
-    font_size=None,
-    key_line_width=None,
-    progress=None,
-    key_progress=None,
-    button_color="white",  # Establecer el color del texto del botón en blanco
-    )
+    st.download_button('🖨️ Descarga del .CSV', datos, file_name=name + '.csv')
     
 else:
     st.markdown("<p style='color: black;'>Por favor, selecciona un archivo para cargar.</p>", unsafe_allow_html=True)
