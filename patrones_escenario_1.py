@@ -2795,7 +2795,7 @@ def extraer_componentes_direccion(cadena):
             componentes_direccion["UnhandledData"] = componentes_206[5]
             return componentes_direccion
 
-        patron_207 = r'^({})\s+([A-Z]+)\s+([A-Z]+)\s+([A-Z]+)\s*(.*)$'.format(re.escape(T), re.escape(Z), re.escape(Z2))
+        patron_207 = r'^({})\s+([A-Z]+)\s+([A-Z]+)\s+([A-Z]+)\s*(.*)$'.format(re.escape(T))
         componentes_207 = verificar_patron(cadena, patron_207)
         if componentes_207 is not None:
             componentes_direccion["TipoVia"] = diccionario_T.get(componentes_207[0])
