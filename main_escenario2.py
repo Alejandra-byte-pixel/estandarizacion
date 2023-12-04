@@ -129,7 +129,7 @@ if nombre_archivo is not None:
     progress=None,
     key_progress=None,
     button_color="white",  # Establecer el color del texto del botón en blanco
-)
+    )
     
 else:
     st.markdown("<p style='color: black;'>Por favor, selecciona un archivo para cargar.</p>", unsafe_allow_html=True)
