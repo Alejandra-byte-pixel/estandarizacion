@@ -11,7 +11,7 @@ st.markdown(
     .main {
         background-color: #FFFFFF;
         padding: 0;
-        color: black;
+        color: white;
     }
     </style>
     """,
@@ -84,7 +84,7 @@ Dataframe2 = {"ADDRESS": [],
               "ADDR_LINE_THREE": []
 }
 
-datos = ""  # Agrega esta línea para inicializar la variable datos
+datos = ""  #inicializar la variable datos
 
 if nombre_archivo is not None:
     contenido = nombre_archivo.read().decode("utf-8")
@@ -101,7 +101,7 @@ if nombre_archivo is not None:
         resultado_str = linea + ";" + ";".join(str(item) for item in resultado)
         datos += resultado_str + '\r\n'
 
-    # Crear un DataFrame con los resultados
+    # Crear DataFrame 
     df = pd.DataFrame(Dataframe2)
 
     # Mostrar el resultado en una tabla
